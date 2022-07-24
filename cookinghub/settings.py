@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-9!+qmw91och(k9sx8x7(&(=18a3$+6#l=ogr2w*gnhkjb*$v#w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['cookinghub-backend-server.azurewebsites.net']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -134,5 +134,5 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8080',
-    'cookinghub-backend-server.azurewebsites.net'
+    'cookinghub-backend.azurewebsites.net'
 ]
