@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9!+qmw91och(k9sx8x7(&(=18a3$+6#l=ogr2w*gnhkjb*$v#w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['cookinghub-backend.azurewebsites.net', '127.0.0.1']
 
 
 # Application definition
@@ -134,5 +134,9 @@ STATIC_ROOT = BASE_DIR / 'staticfiles'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:8080',
-    'cookinghub-backend.azurewebsites.net'
+    'http://www.cookinghub-backend.azurewebsites.net'
 ]
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = BASE_DIR / 'media'
