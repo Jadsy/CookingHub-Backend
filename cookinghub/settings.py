@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9!+qmw91och(k9sx8x7(&(=18a3$+6#l=ogr2w*gnhkjb*$v#w'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['cookinghub-backend.azurewebsites.net', '127.0.0.1']
 
