@@ -8,7 +8,11 @@ from rest_framework.views import APIView
 
 class RecipeList(APIView):
     def get(self, request):
-        recipes = Recipe.objects.all()
+        id = request.GET.get("id")
+        if id:
+            recipes = Recipe.objects.filter(id=id)
+        else:
+            recipes = Recipe.objects.all()
         serializer = RecipeSerializer(recipes, many=True)
         return Response(serializer.data)
 
