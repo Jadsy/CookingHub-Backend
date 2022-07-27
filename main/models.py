@@ -1,7 +1,3 @@
-from distutils.command.upload import upload
-from email.mime import image
-from time import time
-from unicodedata import category, name
 from django.db import models
 
 class Recipe(models.Model):

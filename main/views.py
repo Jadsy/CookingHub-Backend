@@ -6,6 +6,7 @@ from rest_framework.views import APIView
 class RecipeList(APIView):
     def get(self, request):
         category = request.GET.get("category")
+        print(category)
         if id:
             recipes = Recipe.objects.filter(category=category)
         else:
