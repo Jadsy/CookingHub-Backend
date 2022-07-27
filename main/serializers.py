@@ -1,15 +1,16 @@
 from dataclasses import fields
 from rest_framework import serializers
 
-from .models import Category, Recipe
+from .models import Ingredient, Recipe, Direction
 
 
-class CategorySerializer(serializers.ModelSerializer):
+class IngredientSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Category
+        model = Ingredient
         fields = (
             "id",
-            "name"
+            "name",
+            "recipe"
         )
 
 class RecipeSerializer(serializers.ModelSerializer):
@@ -19,10 +20,14 @@ class RecipeSerializer(serializers.ModelSerializer):
             "id",
             "name",
             "category",
-            "prep_time",
-            "servings",
+            "description",
             "image",
-            "ingredients",
-            "instructions",
-            "is_public"
+        )
+class DirectionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Direction
+        fields = (
+            "id",
+            "body",
+            "recipe"
         )

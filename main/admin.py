@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Category, Recipe
+from .models import Ingredient, Direction, Recipe
 # Register your models here.
-admin.site.register(Category)
+admin.site.register(Ingredient)
 admin.site.register(Recipe)
+admin.site.register(Direction)
